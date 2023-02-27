@@ -5,33 +5,46 @@
   <meta charset="UTF_8">
   <title>Hali ya Hewa</title>
   <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://kit.fontawesome.com/8df802755c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
 
+<body>
   <header>
     <h2 style="color: rgb(109, 97, 4); font-size: 34px; font-family: sans-serif; font: bolder;"> Hali Ya Hewa</h2>
   </header>
 
-
-  <div class="login-wrap">
-    <div class="login-html">
-      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
-        In</label>
-      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-
-      <h2 class="active">sign in</h2>
-      <h2 class="active">sign up</h2>
+  <div class="container">
+    <div class="form-box">
+      <!-- <h2>sign in</h2> -->
+      <h2>sign up</h2>
       <form>
-        <input id="tab-1" type="radio" class="text" name="username">
-        <span>username</span>
-        <br>
+        <div class="input-group">
+          <div class="input-field">
+            <i class="fa-solid fa-user"></i>
+            <input id="tab-1" type="text" class="text" name="Name">
+            <span>Name</span>
+          </div>
+        </div>
+        <!-- <br> -->
 
-        <br>
+        <div class="input-field">
+          <i class="fa-solid fa-envelope"></i>
+          <input id="tab-1" type="email" , class="text" , name="Email">
+          <span>Email</span>
+        </div>
 
-        <input type="password" class="text" name="password">
-        <span>password</span>
-        <br>
+        <!-- <br> -->
+        <div class="input-field">
+          <i class="fa-solid fa-lock"></i>
+          <input id="tab-1" , type="password" , class="text" , name="password">
+          <span>Password</span>
+        </div>
+
+
+        <!-- <input type=" password" class="text" name="password">
+          <span>password</span>
+          <br> -->
 
         <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
         <label for="checkbox-1-1">Keep me Signed in</label>
@@ -45,21 +58,23 @@
         <a href="#">Forgot Password</a>
 
 
-        <div class="signup">
-          <form>
-            <div class="group">
-              <input type="radio" class="text" name="Name">
-              <span>Name</span>
-              <br>
+        <!-- <div class="signup">
+            <form>
+              <div class="group">
+                <input type="" class="text" name="Name">
+                <span>Name</span>
+                <br>
 
-              <input type="city" class="text" name="City">
-              <span>City</span>
-            </div>
-          </form>
-        </div>
+                <input type="city" class="text" name="City">
+                <span>City</span>
+              </div>
+            </form>
+          </div> -->
       </form>
-
     </div>
+
+
+  </div>
 </body>
 
 </html>
