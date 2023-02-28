@@ -2,79 +2,79 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF_8">
-  <title>Hali ya Hewa</title>
-  <link rel="stylesheet" href="static/css/style.css">
-  <script src="https://kit.fontawesome.com/8df802755c.js" crossorigin="anonymous"></script>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Hali ya Hewa</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/8df802755c.js" crossorigin="anonymous"></script>
 </head>
 
-
 <body>
-  <header>
-    <h2 style="color: rgb(109, 97, 4); font-size: 34px; font-family: sans-serif; font: bolder;"> Hali Ya Hewa</h2>
-  </header>
-
-  <div class="container">
-    <div class="form-box">
-      <!-- <h2>sign in</h2> -->
-      <h2>sign up</h2>
-      <form>
-        <div class="input-group">
-          <div class="input-field">
-            <i class="fa-solid fa-user"></i>
-            <input id="tab-1" type="text" class="text" name="Name">
-            <span>Name</span>
-          </div>
-        </div>
-        <!-- <br> -->
-
-        <div class="input-field">
-          <i class="fa-solid fa-envelope"></i>
-          <input id="tab-1" type="email" , class="text" , name="Email">
-          <span>Email</span>
-        </div>
-
-        <!-- <br> -->
-        <div class="input-field">
-          <i class="fa-solid fa-lock"></i>
-          <input id="tab-1" , type="password" , class="text" , name="password">
-          <span>Password</span>
-        </div>
-
-
-        <!-- <input type=" password" class="text" name="password">
-          <span>password</span>
-          <br> -->
-
-        <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
-        <label for="checkbox-1-1">Keep me Signed in</label>
-
-        <button class="signin">
-          Sign In
-        </button>
-
-        <hr>
-
-        <a href="#">Forgot Password</a>
-
-
-        <!-- <div class="signup">
+    <!-- <header>
+        <h2 style="color: rgb(109, 97, 4); font-size: 34px; font-family: sans-serif; font: bolder;">Hali Ya Hewa</h2>
+    </header> -->
+    <div class="container">
+        <h1 style="color: rgb(109, 97, 4); font-size: 34px; font-family: sans-serif; font: bolder;">Hali Ya Hewa</h1>
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
             <form>
-              <div class="group">
-                <input type="" class="text" name="Name">
-                <span>Name</span>
-                <br>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
 
-                <input type="city" class="text" name="City">
-                <span>City</span>
-              </div>
+                    <div class="input-field" id="cityField">
+                        <i class="fa-solid fa-city"></i>
+                        <input type="city" placeholder="City">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+
+                    <p>Lost Password <a href="#">Click Here</a></p>
+
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign Up</button>
+                    <button type="button" id="signinBtn" class="disable">Sign in</button>
+                </div>
             </form>
-          </div> -->
-      </form>
+        </div>
     </div>
+    <script>
+
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let cityField = document.getElementById("cityField");
+        let title = document.getElementById("title");
 
 
-  </div>
+        signinBtn.onclick = function () {
+            nameField.style.display = "none";
+            cityField.style.display = "none";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+
+        }
+
+        signupBtn.onclick = function () {
+            nameField.style.display = "";
+            cityField.style.display = "";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+
+        }
+    </script>
 </body>
 
 </html>
