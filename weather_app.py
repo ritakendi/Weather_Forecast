@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+import requests
 
 app = Flask(__name__)
 
+def get_weather_results(zip_code, api_key):
+    api_url = https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 
 @app.route("/")
 @app.route("/home")
@@ -10,7 +13,7 @@ def index():
 
 
 @app.route("/homepage")
-def index():
+def homepage():
     return render_template("homepage.html")
 
 
