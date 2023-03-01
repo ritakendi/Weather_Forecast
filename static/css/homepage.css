@@ -1,6 +1,38 @@
-body {
+body,
+html {
     height: 100%;
     margin: 0;
-    background-image: url("images/sunset.jpeg");
     font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+    background-image: url(../images/Weather-HD-Background.jpeg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+
+}
+
+.container {
+    top: 50px;
+    left: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.widget {
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background: rgba(299, 299, 299, 0.4);
+}
+
+.widget.left {
+    position: absolute;
+    left: 0;
+    width: 200px;
+
 }
